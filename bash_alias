@@ -1,9 +1,31 @@
 alias be="bundle exec"
 alias br="cd ~/code/bridj"
+alias cdd="cd ~/code/dynamic_dropoff"
+alias s="echo 'bundle exec rails server'; bundle exec rails server"
+alias c="echo 'bundle exec rails console'; bundle exec rails console"
+alias r="echo 'bundle exec rake'; bundle exec rake"
+
+alias fn="find . -name"
+
+# git
 alias gs="git status"
 alias gf="git fetch"
 alias gp="git pull"
 alias gl="git log"
 alias gd="git diff"
 alias gg="git grep"
-alias fn="find . -name"
+alias gco="git checkout"
+alias gb="git branch"
+
+alias dml="echo 'docker-machine ls'; docker-machine ls"
+alias dme="echo 'docker-machine env default'; docker-machine env default"
+alias dms="echo 'docker-machine start default'; docker-machine start default"
+alias edm='echo "eval \$(docker-machine env default)"; eval $(docker-machine env default)'
+alias dps='echo "docker ps"; docker ps'
+alias di='echo "docker images"; docker images'
+alias dc="docker-compose"
+alias dcu='echo "docker-compose up"; docker-compose up'
+alias dcdd='echo "docker-compose up web worker"; docker-compose up web worker'
+alias dshdd='docker exec -it dynamicdropoff_web_1 /bin/bash'
+alias ecr='echo "aws ecr get-login | bash"; aws ecr get-login | bash'
+

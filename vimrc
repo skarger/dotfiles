@@ -19,6 +19,13 @@ set hidden
 set cursorline
 "set cursorcolumn
 set colorcolumn=80
+highlight ColorColumn ctermbg=0*
+
+set number
+
+set noswapfile
 
 " ruby
 let ruby_space_errors = 1
+
+let g:syntastic_python_checkers = ['flake8']
