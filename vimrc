@@ -6,6 +6,9 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
+set expandtab
+set autoindent
+
 " allows you to deal with multiple unsaved
 " buffers simultaneously without resorting
 " to misusing tabs

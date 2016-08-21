@@ -29,3 +29,5 @@ alias dcdd='echo "docker-compose up web worker"; docker-compose up web worker'
 alias dshdd='docker exec -it dynamicdropoff_web_1 /bin/bash'
 alias ecr='echo "aws ecr get-login | bash"; aws ecr get-login | bash'
 
+# vim
+alias vim='/usr/local/bin/vim'
