@@ -21,3 +21,9 @@ fi
 
 # for syntastic pylint
 export LC_CTYPE=en_US.UTF-8
+
+
+export PATH="${HOME}/kubernetes/platforms/darwin/amd64:${PATH}"
+
+# Postgres.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
