@@ -16,7 +16,9 @@ alias gd="git diff"
 alias gg="git grep"
 alias gco="git checkout"
 alias gb="git branch"
+alias gscrub="git branch | grep -v master | xargs git branch -D"
 
+alias d="docker"
 alias dml="echo 'docker-machine ls'; docker-machine ls"
 alias dme="echo 'docker-machine env default'; docker-machine env default"
 alias dms="echo 'docker-machine start default'; docker-machine start default"
@@ -27,6 +29,7 @@ alias dc="docker-compose"
 alias dcu='echo "docker-compose up"; docker-compose up'
 alias dcdd='echo "docker-compose up web worker"; docker-compose up web worker'
 alias dshdd='docker exec -it dynamicdropoff_web_1 /bin/bash'
+alias dshddt='echo "docker-compose run --rm tests bash"; docker-compose run --rm tests bash'
 alias ecr='echo "aws ecr get-login | bash"; aws ecr get-login | bash'
 
 # vim
