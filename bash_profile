@@ -21,3 +21,6 @@ export PATH="${HOME}/kubernetes/platforms/darwin/amd64:${PATH}"
 
 # Postgres.app
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
