@@ -15,3 +15,5 @@ function dsh () { docker exec -it $1 /bin/bash; }
 
 # stuart's magic incantation
 #find <dir> -type f -name <filename> -exec sed i '' s/old/new/g {} +
+
+export PATH="$HOME/.yarn/bin:$PATH"

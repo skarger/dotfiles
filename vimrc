@@ -42,3 +42,6 @@ set statusline=%f%m%r%<\ %=%l,%v\ [%L]\ %p%%
 
 " Make sure it always shows
 set laststatus=2
+
+let g:elm_format_autosave = 1
+let g:polyglot_disabled = ['elm']
