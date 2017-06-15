@@ -48,3 +48,9 @@ let g:polyglot_disabled = ['elm']
 
 " for CommandT
 let g:CommandTMaxFiles=200000
+
+
+" The Silver Searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
