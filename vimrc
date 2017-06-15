@@ -45,3 +45,6 @@ set laststatus=2
 
 let g:elm_format_autosave = 1
 let g:polyglot_disabled = ['elm']
+
+" for CommandT
+let g:CommandTMaxFiles=200000
