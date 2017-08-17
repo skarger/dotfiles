@@ -47,10 +47,25 @@ let g:elm_format_autosave = 1
 let g:polyglot_disabled = ['elm']
 
 " for CommandT
-let g:CommandTMaxFiles=200000
+let g:CommandTMaxFiles=400000
 
 
 " The Silver Searcher
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+set tabstop=2       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=2    " Indents will have a width of 4
+set softtabstop=2   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
+
+
+
+" git
+autocmd Filetype gitcommit setlocal spell textwidth=72

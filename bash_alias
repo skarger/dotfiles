@@ -1,11 +1,17 @@
+# directories
+alias cfs="cd ~/code/content-flow-service"
+alias dand="cd ~/code/dandelion"
+alias flt="cd ~/code/flowterie"
+
 alias be="bundle exec"
-alias br="cd ~/code/bridj"
-alias cdd="cd ~/code/dynamic_dropoff"
+alias brs="bundle exec rspec"
 alias s="echo 'bundle exec rails server'; bundle exec rails server"
 alias c="echo 'bundle exec rails console'; bundle exec rails console"
-alias r="echo 'bundle exec rake'; bundle exec rake"
+alias r="echo 'bundle exec rspec spec'; bundle exec rspec spec"
 
 alias fn="find . -name"
+
+alias ag='ag --path-to-ignore ~/.agignore'
 
 # git
 alias gs="git status"

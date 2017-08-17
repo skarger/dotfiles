@@ -1,0 +1,11 @@
+client/salsify/dist
+client/salsify/tmp
+client/admin/dist
+client/admin/tmp
+client/catalogs/dist
+client/catalogs/tmp
+client/lightboxes/dist
+client/lightboxes/tmp
+client/lib/core/dist
+client/lib/core/tmp
+client/*/vendor
