@@ -1,5 +1,6 @@
 # directories
 alias cfs="cd ~/code/content-flow-service"
+alias cfe="cd ~/code/content-flow-engine"
 alias dand="cd ~/code/dandelion"
 alias flt="cd ~/code/flowterie"
 
@@ -40,3 +41,7 @@ alias ecr='echo "aws ecr get-login | bash"; aws ecr get-login | bash'
 
 # vim
 alias vim='/usr/local/bin/vim'
+
+# python
+alias python='python3'
+alias pip='pip3'

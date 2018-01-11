@@ -47,7 +47,11 @@ let g:elm_format_autosave = 1
 let g:polyglot_disabled = ['elm']
 
 " for CommandT
-let g:CommandTMaxFiles=400000
+let g:CommandTMaxFiles=1600000
+
+"if &term =~ "xterm" || &term =~ "screen"
+"  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+"endif
 
 
 " The Silver Searcher

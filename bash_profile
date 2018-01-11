@@ -6,8 +6,6 @@ source ~/.bash_alias
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # for syntastic pylint
@@ -18,3 +16,14 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Yarn
 export PATH="$PATH:`yarn global bin`"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# http://virtualenvwrapper.readthedocs.org/en/latest/index.html
+#export WORKON_HOME=~/envs
+#source /usr/local/bin/virtualenvwrapper.sh
+
+export DB_USER=$USER
