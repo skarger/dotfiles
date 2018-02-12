@@ -1,7 +1,7 @@
 # directories
-alias cfs="cd ~/code/content-flow-service"
-alias dand="cd ~/code/dandelion"
-alias flt="cd ~/code/flowterie"
+alias cfs="cd ${WORK_CODE_DIRECTORY}/content-flow-service"
+alias dand="cd ${WORK_CODE_DIRECTORY}/dandelion"
+alias flt="cd ${PERSONAL_CODE_DIRECTORY}/flowterie"
 
 alias be="bundle exec"
 alias brs="bundle exec rspec"
