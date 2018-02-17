@@ -1,7 +1,7 @@
 [user]
-	email = skarger@salsify.com
+	email = stephen.karger@gmail.com
 	name = Stephen Karger
 [core]
-	excludesfile = /Users/skarger/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
   template = ~/.gitmessage
