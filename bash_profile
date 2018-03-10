@@ -29,3 +29,5 @@ export PATH
 #source /usr/local/bin/virtualenvwrapper.sh
 
 export DB_USER=$USER
+
+export PATH="$HOME/.cargo/bin:$PATH"
