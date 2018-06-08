@@ -28,6 +28,7 @@ alias gg="git grep"
 alias gco="git checkout"
 alias gb="git branch"
 alias gscrub="git branch | grep -v master | xargs git branch -D"
+alias gcp="git cherry-pick"
 
 alias d="docker"
 alias dml="echo 'docker-machine ls'; docker-machine ls"
@@ -49,3 +50,10 @@ alias vim='/usr/local/bin/vim'
 # python
 alias python='python3'
 alias pip='pip3'
+
+# Gemfile
+alias ipry="ruby ${PERSONAL_CODE_DIRECTORY}/dotfiles/scripts/install_pry_gem.rb"
+
+# kubernetes
+alias cfdeployp="open https://jenkins2.ops.salsify.com/job/content-flow-service-deploy/"
+alias cfdeploys="open https://jenkins2.ops.salsify.com/job/staging-content-flow-service-deploy/"

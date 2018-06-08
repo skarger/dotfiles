@@ -8,6 +8,11 @@ function gbd {
 }
 
 
+function fnj() {
+  echo "find . \( -path ./node_modules -o -path ./tmp \) -prune -o -name \"$1\" -print"
+  find . \( -path ./node_modules -o -path ./tmp \) -prune -o -name "$1" -print
+}
+
 function dsh () { docker exec -it $1 /bin/bash; }
 
 # stuart's magic incantation
@@ -19,13 +24,54 @@ export NVM_DIR="/Users/skarger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 function devcred () {
-  echo "Org    s-c89ca57b-d21e-4c82-80f6-bcfdee9bc91f"
-  echo "API    8744546b2be3fcdaefe95292fd9996b091260996e44885ab868295de5b7a1014"
-  echo "User   s-51d0e71b-87c4-4eb4-a31c-7f49e23e8356"
-  echo "Admins s-00dc60f6-47f4-48cf-a880-d5ea0e5ae555"
+  echo "Org    s-76c4a90c-c136-4ae9-b552-7ff253e7bc07"
+  echo "API    50aa788ab89ec619e5b9fdc3496d540f62661483f4eab6f069b9e54877709861"
+  echo "User   s-01d7b283-abaf-4b35-968f-4b7fb99453fe"
+  echo "Admins s-56f25c81-554b-4052-ab71-af6e0c072b74"
 }
 
 function dockerkafka () {
   docker run --restart unless-stopped --detach --name zookeeper confluent/zookeeper:3.4.6-cp1
   docker run --restart unless-stopped --detach --name kafka --link zookeeper:zookeeper --publish 9092:9092 --env KAFKA_ADVERTISED_HOST_NAME=docker.local.host ches/kafka:0.9.0.1
 }
+
+# kubernetes
+function sk8sr () {
+  app=$1
+  shift
+  environment=$1
+  shift
+  command=$*
+  echo "salsifyk8s run cmd -a $app -e $environment $command"
+  salsifyk8s run cmd -a $app -e $environment $command
+}
+
+function cfr () {
+  environment=$1
+  shift
+  command=$*
+  sk8sr content-flow-service $environment $command
+}
+
+function rcp () {
+  cfr prod rails console
+}
+
+function rcs () {
+  cfr staging rails console
+}
+
+function pods () {
+  environment=$1
+  echo "salsifyk8s pod-types -a content-flow-service -e $environment"
+  salsifyk8s pod-types -a content-flow-service -e $environment
+}
+
+function scale () {
+  environment=$1
+  ctype=$2
+  count=$3
+  echo "salsifyk8s pod-types -a content-flow-service -e $environment -t $ctype -c $count"
+  salsifyk8s pod-types -a content-flow-service -e $environment -t $ctype -c $count
+}
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"

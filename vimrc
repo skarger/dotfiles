@@ -44,10 +44,12 @@ set statusline=%f%m%r%<\ %=%l,%v\ [%L]\ %p%%
 set laststatus=2
 
 let g:elm_format_autosave = 1
-let g:polyglot_disabled = ['elm']
+"let g:polyglot_disabled = ['elm']
+let g:elm_setup_keybindings = 0
 
 " for CommandT
 let g:CommandTMaxFiles=1600000
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules,tmp"
 
 "if &term =~ "xterm" || &term =~ "screen"
 "  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
@@ -73,3 +75,8 @@ set expandtab       " Expand TABs to spaces
 
 " git
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" prompt to open file in same directory
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
