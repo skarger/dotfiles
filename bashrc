@@ -53,12 +53,23 @@ function cfr () {
   sk8sr content-flow-service $environment $command
 }
 
+function dnr () {
+  environment=$1
+  shift
+  command=$*
+  sk8sr dandelion $environment $command
+}
+
 function rcp () {
-  cfr prod rails console
+  cfr prod rails console $1
 }
 
 function rcs () {
-  cfr staging rails console
+  cfr staging rails console $1
+}
+
+function rdp () {
+  dnr prod rails console $1
 }
 
 function pods () {
