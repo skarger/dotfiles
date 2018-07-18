@@ -1,5 +1,5 @@
-export PERSONAL_CODE_DIRECTORY=~/Documents/personal/code
-export WORK_CODE_DIRECTORY=~/Documents/work/salsify/code
+export PERSONAL_CODE_DIRECTORY=~/Code/personal
+export WORK_CODE_DIRECTORY=~/Code/work/salsify
 source ~/.bashrc
 source ~/.bash_alias
 

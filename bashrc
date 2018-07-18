@@ -72,6 +72,10 @@ function rdp () {
   dnr prod rails console $1
 }
 
+function rds () {
+  dnr staging rails console $1
+}
+
 function pods () {
   environment=$1
   echo "salsifyk8s pod-types -a content-flow-service -e $environment"
