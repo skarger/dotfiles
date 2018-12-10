@@ -13,6 +13,11 @@ function fnj() {
   find . \( -path ./node_modules -o -path ./tmp \) -prune -o -name "$1" -print
 }
 
+function rsp() {
+  echo "USE_PRY=1 bundle exec rspec $*"
+  USE_PRY=1 bundle exec rspec $*
+}
+
 function dsh () { docker exec -it $1 /bin/bash; }
 
 # stuart's magic incantation
@@ -89,4 +94,3 @@ function scale () {
   echo "salsifyk8s pod-types -a content-flow-service -e $environment -t $ctype -c $count"
   salsifyk8s pod-types -a content-flow-service -e $environment -t $ctype -c $count
 }
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"

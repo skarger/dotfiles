@@ -2,7 +2,9 @@
 alias cwc="cd ${WORK_CODE_DIRECTORY}"
 alias cfs="cd ${WORK_CODE_DIRECTORY}/content-flow-service"
 alias cfe="cd ${WORK_CODE_DIRECTORY}/content-flow-engine"
+alias wfs="cd ${WORK_CODE_DIRECTORY}/ui-workflow-support"
 alias dand="cd ${WORK_CODE_DIRECTORY}/dandelion"
+alias aud="cd ${WORK_CODE_DIRECTORY}/audits-service"
 
 alias cpc="cd ${PERSONAL_CODE_DIRECTORY}"
 alias flt="cd ${PERSONAL_CODE_DIRECTORY}/flowterie"
@@ -19,16 +21,18 @@ alias fn="find . -name"
 alias ag='ag --path-to-ignore ~/.agignore'
 
 # git
+alias got="git"
 alias gs="git status"
+alias gb="git branch"
 alias gf="git fetch"
 alias gp="git pull"
 alias gl="git log"
 alias gd="git diff"
 alias gg="git grep"
-alias gco="git checkout"
-alias gb="git branch"
-alias gscrub="git branch | grep -v master | xargs git branch -D"
 alias gcp="git cherry-pick"
+alias gco="git checkout"
+alias ga="git add"
+alias gscrub="git branch | grep -v master | xargs git branch -D"
 
 alias d="docker"
 alias dml="echo 'docker-machine ls'; docker-machine ls"
@@ -57,3 +61,9 @@ alias ipry="ruby ${PERSONAL_CODE_DIRECTORY}/dotfiles/scripts/install_pry_gem.rb"
 # kubernetes
 alias cfdeployp="open https://jenkins2.ops.salsify.com/job/content-flow-service-deploy/"
 alias cfdeploys="open https://jenkins2.ops.salsify.com/job/staging-content-flow-service-deploy/"
+
+# show linked NPM modules
+alias linked="( ls -l node_modules ; ls -l node_modules/* ) | grep ^l"
+
+# Ember
+alias edl="yarn run ember dependency-lint"

@@ -1,5 +1,6 @@
 export PERSONAL_CODE_DIRECTORY=~/Code/personal
 export WORK_CODE_DIRECTORY=~/Code/work/salsify
+export EDITOR=vim
 source ~/.bashrc
 source ~/.bash_alias
 
@@ -9,6 +10,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# colorize file types in terminal
+export CLICOLOR=true
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 # for syntastic pylint
 export LC_CTYPE=en_US.UTF-8
