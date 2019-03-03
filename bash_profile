@@ -24,9 +24,13 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 # Yarn
 export PATH="$PATH:`yarn global bin`"
 
-# Setting PATH for Python 3.6
+# Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
+
+# Needed to make awscli available pip3 install awscli --upgrade --user
+PATH="$HOME/Library/Python/3.7/bin:${PATH}"
 export PATH
 
 # http://virtualenvwrapper.readthedocs.org/en/latest/index.html
@@ -36,3 +40,6 @@ export PATH
 export DB_USER=$USER
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# java
+export PATH="/usr/local/java/jdk-11.0.1.jdk/Contents/Home/bin:$PATH"
